@@ -1,5 +1,5 @@
 var test = require('tape');
-var logic = require('./logic');
+var todoFunctions = require('./logic');
 
 test('Example test', function(t) {
   t.pass();
@@ -8,7 +8,7 @@ test('Example test', function(t) {
 
 
 test('deleteToDo list', function(assert) {
-  var actual = logic.deleteTodo
+  var actual = todoFunctions.deleteTodo
     ([
       {
         id: 0,
@@ -32,7 +32,7 @@ test('deleteToDo list', function(assert) {
 
 
   test('AddToDoTest', function(t) {
-    var actual= logic.addTodo( [],{
+    var actual= todoFunctions.addTodo( [],{
       id:0,
       description: "watching",
       done: false,
@@ -49,3 +49,29 @@ test('deleteToDo list', function(assert) {
     t.end();
   });
 
+
+  test('test for Sort', function(t){
+    var a= "d";
+    
+      var ar = [
+        {Description:"a" , priority:"low"},
+        {Description:"b" , priority:"high"},
+        {Description:"c" , priority:"low"},
+    
+        // {Description:"c" , priority:"low"}
+      
+    
+    ]
+    
+      var actual = todoFunctions.sortTodos(ar);
+    var expcted = [
+      { Description: 'b', priority: 'high' },
+       { Description: 'a', priority: 'low' }, 
+       { Description: 'c', priority: 'low' }
+    
+    ]
+    
+      t.deepEqual(actual,expcted,'Un Sorted');
+    
+      t.end();
+    });
