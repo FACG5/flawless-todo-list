@@ -26,7 +26,8 @@ var todoFunctions = {
 
 
     addTodo: function(todos, newTodo) {
-
+      console.log(todos,'todos');
+      console.log(newTodo,'newTodo');
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
       // add an id to the newTodo. You can use the generateId function to create an id.
@@ -58,21 +59,18 @@ var todoFunctions = {
       // in the new todo array, all elements will remain unchanged except the one with id: idToMark
       // this element will have its done value toggled
       // hint: array.map
-
-    
       var newArr = todoFunctions.cloneArrayOfObjects(todos);
-      // console.log(newArr);
-      // newArr[0].desc.strike();
-      // newArr[0].mark = !newArr[0].mark;
-      // return newArr;
-      
-      var marked = newArr.map(function(item) {
-        if (item.id == idToMark) {
-          item.mark = !item.mark
-        }
-        return item;
-    });
-    return marked;
+// console.log(newArr);
+// newArr[0].desc.strike();
+// newArr[0].mark = !newArr[0].mark;
+// return newArr;
+  return newArr.map(function(item) {
+    if(item.id==idToMark){
+      item.mark = !item.mark
+    
+    }
+    return item;
+});
 
     },
     sortTodos: function(todos) {

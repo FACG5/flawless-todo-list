@@ -2,6 +2,7 @@
     font-family: 'Cairo', sans-serif;
 font-weight: bold;
 
+
 }
 .bg{
 
@@ -29,10 +30,11 @@ width:50%;
 box-shadow: -6px 0px 80px 19px rgba(69,66,69,1);
 margin:0 auto;
 margin-top: 100px;
-padding: 5px 5px 5px 20px;  
+padding: 5px 5px 20px 20px;  
 }
 .view{
     margin-top: 20px;
+    padding 0px;  
  
 }
 input[type=submit] {
@@ -80,10 +82,50 @@ input[type=date]{
 /* #todo-container{
     width: 90%; height: 150px; overflow: auto;
 } */
-.content h2 {
+.content h1 {
 /* margin-left:250px; */
-align-content: center;
+text-align: center;
+letter-spacing: 2px;
+word-spacing: 2px;
 color: rgb(255, 255, 255);
-    text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
+text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
 }
 
+.todo-desc{
+    color: white;
+    list-style-type: none;
+}
+.btn-mark{
+    
+    background-color:lightgray;
+    }
+    .mark {
+        text-decoration: line-through;
+        background-color: red;
+        
+    }
+    input [type=checkbox]{
+        float: left;
+    }
+    ul {
+        list-style: none;
+        text-align: left;
+        padding: 20px;
+        margin: 0%;
+        min-height: 100px;
+    }
+    li input{
+        margin-right: 5%;
+    }
+    li input:hover{
+        cursor: pointer;
+    }
+    .icon{
+        margin-right: 10%;
+        display: inline-block;
+        color: red;
+        float: right;
+    }
+    .icon:hover{
+        cursor: pointer;
+    }
