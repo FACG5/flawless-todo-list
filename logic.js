@@ -25,21 +25,20 @@ var todoFunctions = {
     },
 
 
-    addTaddTodoodo: function(todos, newTodo) {
     addTodo: function(todos, newTodo) {
 
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
       // add an id to the newTodo. You can use the generateId function to create an id.
       // hint: array.concat
+      var newTodo1 = todoFunctions.cloneArrayOfObjects(todos);
+      //newTodo1.push(newTodo);
+
+      return  newTodo1.concat(newTodo);
 
 
-    },
 
-var newTodo1 = todoFunctions.cloneArrayOfObjects(todos);
-       //newTodo1.push(newTodo);
 
-       return  newTodo1.concat(newTodo);
 
 },
 
@@ -60,13 +59,25 @@ var newTodo1 = todoFunctions.cloneArrayOfObjects(todos);
       // this element will have its done value toggled
       // hint: array.map
     },
-    sortTodos: function(todos, sortFunction) {
-      // stretch goal! Do this last
-      // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
-      // sortFunction will have same signature as the sort function in array.sort
-      // hint: array.slice, array.sort
-    },
-  };
+    sortTodos: function(todos) {
+      var newar = todoFunctions.cloneArrayOfObjects(todos);
+   return newar.sort(function(a, b) {
+     var x = a.priority.toLowerCase();
+     var y = b.priority.toLowerCase();
+   
+     if (x <y) {
+       return -1;
+     }
+   
+     if (x > y) {
+       return 1;
+     }
+     return 0;
+   });
+   
+       },
+     };
+     
 
 
   // Why is this if statement necessary?
