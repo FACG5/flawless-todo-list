@@ -1,6 +1,3 @@
-TODO-List
-
-
 
 # **[FlawlessTeam To-Do list Link](https://facg5.github.io/flawless-todo-list/)**
 
