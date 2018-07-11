@@ -24,20 +24,34 @@ var todoFunctions = {
       });
     },
 
+
+    addTaddTodoodo: function(todos, newTodo) {
     addTodo: function(todos, newTodo) {
+
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
       // add an id to the newTodo. You can use the generateId function to create an id.
       // hint: array.concat
+
+
+    },
+
 var newTodo1 = todoFunctions.cloneArrayOfObjects(todos);
        //newTodo1.push(newTodo);
 
        return  newTodo1.concat(newTodo);
 
 },
+
     deleteTodo: function(todos, idToDelete) {
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // return a new array, this should not contain any todo with an id of idToDelete
+       var cloned = todoFunctions.cloneArrayOfObjects(todos);
+       return cloned.filter(function(item){
+       return item.id != idToDelete;
+      });
+
+
       // hint: array.filter
     },
     markTodo: function(todos, idToMark) {
