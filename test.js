@@ -1,12 +1,7 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
-test('Example test', function(t) {
-  t.pass();
-  t.end();
-});
-
-
+// delete test
 test('deleteToDo list', function(assert) {
   var actual = todoFunctions.deleteTodo
     ([
@@ -30,7 +25,7 @@ test('deleteToDo list', function(assert) {
   assert.end();
 });
 
-
+// add test
   test('AddToDoTest', function(t) {
     var actual= todoFunctions.addTodo( [],{
       id:0,
@@ -49,7 +44,7 @@ test('deleteToDo list', function(assert) {
     t.end();
   });
 
-
+// sort test 
   test('test for Sort', function(t){
     var a= "d";
     
@@ -57,10 +52,7 @@ test('deleteToDo list', function(assert) {
         {Description:"a" , priority:"low"},
         {Description:"b" , priority:"high"},
         {Description:"c" , priority:"low"},
-    
-        // {Description:"c" , priority:"low"}
-      
-    
+  
     ]
     
       var actual = todoFunctions.sortTodos(ar);
@@ -73,5 +65,39 @@ test('deleteToDo list', function(assert) {
     
       t.deepEqual(actual,expcted,'Un Sorted');
     
+      t.end();
+    });
+
+    // mark function 
+
+    test('Example test', function(t) {
+  
+      var ar = [
+        {desc:"ali" , id:7 , mark:false}
+      ]
+    
+      var actual = todoFunctions.markTodo(ar, 7);
+      var expected = [
+        {desc:"ali" , id:7 , mark: true}
+      ]
+      
+    
+      t.deepEqual(actual, expected, 'make tea should be undone');
+      t.end();
+    });
+    
+    test('Example test', function(t) {
+      
+      var ar = [
+        {desc:"ali" , id:7 , mark:true}
+      ]
+    
+      var actual = todoFunctions.markTodo(ar, 7);
+      var expected = [
+        {desc:"ali" , id:7 , mark: false}
+      ]
+      
+    
+      t.deepEqual(actual, expected, 'make tea should be done');
       t.end();
     });
