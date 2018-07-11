@@ -21,14 +21,14 @@
   event.preventDefault();
   
   var descriptionToDo = document.getElementById("description");
-  var dateToDO = document.getElementById("date").value;
+  var selectToDo = document.getElementById("select").value;
   var idToDo = todoFunctions.generateId();
   var markToDo = false;
   if(descriptionToDo.value.trim()===''){
     alert('You must enter Description ! ');
   }
   else{
-  var newItem = {id:idToDo , description:descriptionToDo.value,date:dateToDO,mark:markToDo};
+  var newItem = {id:idToDo , description:descriptionToDo.value,priority:selectToDo,mark:markToDo};
   var newState = todoFunctions.addTodo(state,newItem);
 
   update(newState);
@@ -37,6 +37,12 @@
    });
 
    // 
+   var sort = document.getElementById('sort');
+   sort.addEventListener("click",function(event){
+     event.preventDefault();
+     var newState = todoFunctions.sortTodos(state);
+     update(newState);
+   })
 
 
   var createTodoNode = function(todo) {
@@ -66,7 +72,7 @@
     todoNode.appendChild(markBtn);
 
 var span = document.createElement('span');
-span.textContent = todo.description;
+span.textContent = todo.description+ ": ( "+todo.priority+" )";
 if(todo.mark){
 
   span.style.background="#d6d62a";

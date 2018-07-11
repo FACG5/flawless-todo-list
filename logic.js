@@ -75,19 +75,23 @@ var todoFunctions = {
     },
     sortTodos: function(todos) {
       var newar = todoFunctions.cloneArrayOfObjects(todos);
-   return newar.sort(function(a, b) {
-     var x = a.priority.toLowerCase();
-     var y = b.priority.toLowerCase();
-   
-     if (x <y) {
-       return -1;
-     }
-   
-     if (x > y) {
-       return 1;
-     }
-     return 0;
-   });
+      var arr2=[];
+      for(var i=0; i<newar.length; i++){
+        if(newar[i].priority==='high'){
+          arr2.push(newar[i])
+        }
+      }
+      for(var i=0; i<newar.length; i++){
+        if(newar[i].priority==='medium'){
+          arr2.push(newar[i])
+        }
+      }
+      for(var i=0; i<newar.length; i++){
+        if(newar[i].priority==='low'){
+          arr2.push(newar[i])
+        }
+      }
+      return arr2;
    
        },
      };

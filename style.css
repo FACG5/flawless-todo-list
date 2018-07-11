@@ -34,10 +34,10 @@ padding: 5px 5px 20px 20px;
 }
 .view{
     margin-top: 20px;
-    padding 0px;  
+    padding :0px;  
  
 }
-input[type=submit] {
+input[type=submit]{
 
     background-color: rgb(233, 227, 227); /* Green */
     border-radius: 5px;
@@ -46,8 +46,7 @@ input[type=submit] {
     color: rgb(36, 35, 35);
     padding:6px 20px;
     text-align: center;
-    display: block;
-    width:96%;
+    display: inline-block;
     margin-top: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -59,6 +58,13 @@ input[type=submit] {
 input[type=submit]:hover{
 background: #838080;
 }
+.add{
+    width:63%;
+    margin-right: 2%;
+}
+.sort{
+    width: 30%;
+}
 input[type=text]{
     /* display: block; */
     width: 60%;
@@ -68,14 +74,14 @@ input[type=text]{
     padding: 7px;
     /* margin-left: 12px; */
 }
-input[type=date]{
+select{
     display: inline-block;
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
     /* resize: vertical; */
-    padding: 5px;
-    margin-left:10px;
+    padding: 7px;
+    margin-left:3%;
     
 }
 

@@ -18,8 +18,15 @@
     <form id="add-todo">
       <input id = "description"type="text" name="description" value="" placeholder="Your item Description">
       
-      <input id = "date" type="date" name="date" value="" >
-      <input id = "add" type="submit" name="" value="submit">
+      <select id="select">
+        <option value="high">high</option>
+        <option value="medium">medium</option>
+        <option value="low">low</option>
+       
+      </select>    
+        <input id = "add"  class="add" type="submit" name="" value="submit">
+        <input class="sort" id = "sort" type="submit" name="" value="sort">
+
     <div class="content view">
       <div id = "todo-container">
    </div>
