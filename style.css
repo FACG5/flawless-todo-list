@@ -1,19 +1,18 @@
-*{
+* {
     font-family: 'Cairo', sans-serif;
 font-weight: bold;
 
 
 }
-.bg{
 
-position: absolute;
+.bg {
+    position: absolute;
     left: 0;
     right: 0;
-    top:0;
+    top: 0;
     bottom: 0;
-    /* z-index: 1; */
-background-size: cover;
-    background-image:url("img/bg.jpg");
+    background-size: cover;
+    background-image: url("img/bg.jpg");
     height: 100%;
     width: 100%;
     /* background-position: center;
@@ -39,24 +38,24 @@ padding: 5px 5px 20px 20px;
 }
 input[type=submit]{
 
-    background-color: rgb(233, 227, 227); /* Green */
+input[type=submit] {
+    background-color: rgb(233, 227, 227);
+    /* Green */
     border-radius: 5px;
     border: none;
-
     color: rgb(36, 35, 35);
-    padding:6px 20px;
+    padding: 6px 20px;
     text-align: center;
     display: inline-block;
     margin-top: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
-    /* margin-left: px; */
     padding: 10px 10px;
     font-size: 15px;
 }
 
-input[type=submit]:hover{
-background: #838080;
+input[type=submit]:hover {
+    background: #838080;
 }
 .add{
     width:63%;
@@ -72,7 +71,6 @@ input[type=text]{
     border-radius: 4px;
     resize: vertical;
     padding: 7px;
-    /* margin-left: 12px; */
 }
 select{
     display: inline-block;
