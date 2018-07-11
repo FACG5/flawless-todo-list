@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FACG5/flawless-todo-list#readme",
   "devDependencies": {
+    "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   }
 }
