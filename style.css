@@ -1,6 +1,8 @@
 * {
     font-family: 'Cairo', sans-serif;
-    font-weight: bold;
+font-weight: bold;
+
+
 }
 
 .bg {
@@ -13,24 +15,28 @@
     background-image: url("img/bg.jpg");
     height: 100%;
     width: 100%;
-    filter: blur(3px) grayscale(100%);
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    /* opacity: 0.9; */
+    filter: blur(3px) grayscale(100%);	
 }
-
-.content {
-    background: rgba(29, 28, 28, 0.9);
-    border-radius: 10px 30px 10px 30px;
-    position: relative;
-    width: 50%;
-    box-shadow: -6px 0px 80px 19px rgba(69, 66, 69, 1);
-    margin: 0 auto;
-    margin-top: 100px;
-    padding: 5px 5px 20px 20px;
+.content{
+background: rgba(29, 28, 28, 0.9);
+border-radius:10px 30px 10px 30px;
+position: relative;
+width:50%;
+box-shadow: -6px 0px 80px 19px rgba(69,66,69,1);
+margin:0 auto;
+margin-top: 100px;
+padding: 5px 5px 20px 20px;  
 }
-
-.view {
+.view{
     margin-top: 20px;
-    padding: 0px;
+    padding :0px;  
+ 
 }
+input[type=submit]{
 
 input[type=submit] {
     background-color: rgb(233, 227, 227);
@@ -40,8 +46,7 @@ input[type=submit] {
     color: rgb(36, 35, 35);
     padding: 6px 20px;
     text-align: center;
-    display: block;
-    width: 96%;
+    display: inline-block;
     margin-top: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -52,73 +57,79 @@ input[type=submit] {
 input[type=submit]:hover {
     background: #838080;
 }
-
-input[type=text] {
+.add{
+    width:63%;
+    margin-right: 2%;
+}
+.sort{
+    width: 30%;
+}
+input[type=text]{
+    /* display: block; */
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     padding: 7px;
 }
-
-input[type=date] {
+select{
     display: inline-block;
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 5px;
-    margin-left: 10px;
+    /* resize: vertical; */
+    padding: 7px;
+    margin-left:3%;
+    
 }
 
+/* #todo-container{
+    width: 90%; height: 150px; overflow: auto;
+} */
 .content h1 {
-    text-align: center;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
+/* margin-left:250px; */
+text-align: center;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: rgb(255, 255, 255);
+text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
 }
 
-.todo-desc {
+.todo-desc{
     color: white;
     list-style-type: none;
 }
-
-.btn-mark {
-    background-color: lightgray;
-}
-
-.mark {
-    text-decoration: line-through;
-    background-color: red;
-}
-
-input [type=checkbox] {
-    float: left;
-}
-
-ul {
-    list-style: none;
-    text-align: left;
-    padding: 20px;
-    margin: 0%;
-    min-height: 100px;
-}
-
-li input {
-    margin-right: 5%;
-}
-
-li input:hover {
-    cursor: pointer;
-}
-
-.icon {
-    margin-right: 10%;
-    display: inline-block;
-    color: red;
-    float: right;
-}
-
-.icon:hover {
-    cursor: pointer;
-}
+.btn-mark{
+    
+    background-color:lightgray;
+    }
+    .mark {
+        text-decoration: line-through;
+        background-color: red;
+        
+    }
+    input [type=checkbox]{
+        float: left;
+    }
+    ul {
+        list-style: none;
+        text-align: left;
+        padding: 20px;
+        margin: 0%;
+        min-height: 100px;
+    }
+    li input{
+        margin-right: 5%;
+    }
+    li input:hover{
+        cursor: pointer;
+    }
+    .icon{
+        margin-right: 10%;
+        display: inline-block;
+        color: red;
+        float: right;
+    }
+    .icon:hover{
+        cursor: pointer;
+    }
