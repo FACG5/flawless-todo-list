@@ -40,14 +40,13 @@ test('deleteToDo list', function(assert) {
     }]
 
 
-    t.deepEqual(actual, expected,"should return sleep");
+    t.deepEqual(actual, expected,"should return watching");
     t.end();
   });
 
 // sort test 
   test('test for Sort', function(t){
-    var a= "d";
-    
+  
       var ar = [
         {Description:"a" , priority:"low"},
         {Description:"b" , priority:"high"},
