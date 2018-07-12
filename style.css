@@ -5,7 +5,7 @@ font-weight: bold;
 
 }
 
-.bg {
+.background {
     position: absolute;
     left: 0;
     right: 0;
@@ -94,8 +94,9 @@ text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
     background-color:lightgray;
     }
     .mark {
-        text-decoration: line-through;
-        background-color: red;
+     background:#d6d62a;
+         color:black;
+        padding:0px 15px;
         
     }
     input [type=checkbox]{
@@ -122,4 +123,67 @@ text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
     }
     .icon:hover{
         cursor: pointer;
+    }
+
+
+    @media (max-width: 600px) {
+        input[type=text]{
+            /* display: block; */
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            padding: 7px;
+            display: block;
+        }
+        .add{
+            width:40%;
+            margin-right: 10px;
+            
+        }
+        .content h1 {
+            /* margin-left:250px; */
+            text-align: center;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
+            font-size: 15px;
+            }
+            select{
+                display: block;
+                margin-top: 10px;
+                width: 86%;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                /* resize: vertical; */
+                padding: 7px;
+                margin-left: 0%;
+                
+               
+                
+            }
+            .sort{
+                width: 40%;
+                
+            }
+            .content{
+                background: rgba(29, 28, 28, 0.9);
+                border-radius:10px 30px 10px 30px;
+                position: relative;
+                width:80%;
+                box-shadow: -6px 0px 80px 19px rgba(69,66,69,1);
+                margin:0 auto;
+                margin-top: 100px;
+                padding: 5px 5px 20px 20px;  
+                }
+                .view{
+                    margin-top: 10px;
+                    padding :0px;  
+                    width: 90%;
+                    margin-left: 0%;
+                    display: inline-block;
+                 
+                }
+                
     }

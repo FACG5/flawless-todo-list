@@ -26,6 +26,7 @@
 
   update(newState);
   descriptionToDo.value='';
+  
   }
    });
 
@@ -67,10 +68,11 @@
 var span = document.createElement('span');
 span.textContent = todo.description+ ": ( "+todo.priority+" )";
 if(todo.mark){
+  span.classList.add("mark");
 
-  span.style.background="#d6d62a";
-  span.style.color="black";
-  span.style.padding="0px 15px";
+  // span.style.background="#d6d62a";
+  // span.style.color="black";
+  // span.style.padding="0px 15px";
 todoNode.appendChild(span);
 
 }
@@ -83,8 +85,15 @@ else{
     deleteButtonNode.className='far fa-trash-alt icon';
 
     deleteButtonNode.addEventListener('click', function(event) {
+      var confirmmessage = confirm("Are You Sure ?");
+      if(confirmmessage){
+      
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
+      }
+      else{
+
+      }
     });
     todoNode.appendChild(deleteButtonNode);
 
