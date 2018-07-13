@@ -1,8 +1,6 @@
 * {
     font-family: 'Cairo', sans-serif;
-font-weight: bold;
-
-
+    font-weight: bold;
 }
 
 .background {
@@ -15,24 +13,24 @@ font-weight: bold;
     background-image: url("img/bg.jpg");
     height: 100%;
     width: 100%;
-    filter: blur(3px) grayscale(100%);	
-}
-.content{
-background: rgba(29, 28, 28, 0.9);
-border-radius:10px 30px 10px 30px;
-position: relative;
-width:50%;
-box-shadow: -6px 0px 80px 19px rgba(69,66,69,1);
-margin:0 auto;
-margin-top: 100px;
-padding: 5px 5px 20px 20px;  
-}
-.view{
-    margin-top: 20px;
-    padding :0px;  
- 
+    filter: blur(3px) grayscale(100%);
 }
 
+.content {
+    background: rgba(29, 28, 28, 0.9);
+    border-radius: 10px 30px 10px 30px;
+    position: relative;
+    width: 50%;
+    box-shadow: -6px 0px 80px 19px rgba(69, 66, 69, 1);
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 5px 5px 20px 20px;
+}
+
+.view {
+    margin-top: 20px;
+    padding: 0px;
+}
 
 input[type=submit] {
     background-color: rgb(233, 227, 227);
@@ -52,138 +50,134 @@ input[type=submit] {
 input[type=submit]:hover {
     background: #838080;
 }
-.add{
-    width:63%;
+
+.add {
+    width: 63%;
     margin-right: 2%;
 }
-.sort{
+
+.sort {
     width: 30%;
 }
-input[type=text]{
+
+input[type=text] {
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     padding: 7px;
 }
-select{
+
+select {
     display: inline-block;
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    /* resize: vertical; */
     padding: 7px;
-    margin-left:3%;
-    
+    margin-left: 3%;
 }
 
 .content h1 {
-text-align: center;
-letter-spacing: 2px;
-word-spacing: 2px;
-color: rgb(255, 255, 255);
-text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
 }
 
-.todo-desc{
+.todo-desc {
     color: white;
     list-style-type: none;
 }
-.btn-mark{
-    
-    background-color:lightgray;
+
+.btn-mark {
+    background-color: lightgray;
+}
+
+.mark {
+    background: #d6d62a;
+    color: black;
+    padding: 0px 15px;
+}
+
+input [type=checkbox] {
+    float: left;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding: 20px;
+    margin: 0%;
+    min-height: 100px;
+}
+
+li input {
+    margin-right: 5%;
+}
+
+li input:hover {
+    cursor: pointer;
+}
+
+.icon {
+    margin-right: 10%;
+    color: red;
+    float: right;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    input[type=text] {
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        padding: 7px;
+        display: block;
     }
-    .mark {
-     background:#d6d62a;
-         color:black;
-        padding:0px 15px;
-        
+    .add {
+        width: 40%;
+        margin-right: 10px;
     }
-    input [type=checkbox]{
-        float: left;
+    .content h1 {
+        text-align: center;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
+        font-size: 15px;
     }
-    ul {
-        list-style: none;
-        text-align: left;
-        padding: 20px;
-        margin: 0%;
-        min-height: 100px;
+    select {
+        display: block;
+        margin-top: 10px;
+        width: 86%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 7px;
+        margin-left: 0%;
     }
-    li input{
-        margin-right: 5%;
+    .sort {
+        width: 40%;
     }
-    li input:hover{
-        cursor: pointer;
+    .content {
+        background: rgba(29, 28, 28, 0.9);
+        border-radius: 10px 30px 10px 30px;
+        position: relative;
+        width: 80%;
+        box-shadow: -6px 0px 80px 19px rgba(69, 66, 69, 1);
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 5px 5px 20px 20px;
     }
-    .icon{
-        margin-right: 10%;
+    .view {
+        margin-top: 10px;
+        padding: 0px;
+        width: 90%;
+        margin-left: 0%;
         display: inline-block;
-        color: red;
-        float: right;
     }
-    .icon:hover{
-        cursor: pointer;
-    }
-
-
-    @media (max-width: 600px) {
-        input[type=text]{
-            /* display: block; */
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-            padding: 7px;
-            display: block;
-        }
-        .add{
-            width:40%;
-            margin-right: 10px;
-            
-        }
-        .content h1 {
-            /* margin-left:250px; */
-            text-align: center;
-            letter-spacing: 2px;
-            word-spacing: 2px;
-            color: rgb(255, 255, 255);
-            text-shadow: 0px 12px 30px rgba(0, 0, 0, 1);
-            font-size: 15px;
-            }
-            select{
-                display: block;
-                margin-top: 10px;
-                width: 86%;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                /* resize: vertical; */
-                padding: 7px;
-                margin-left: 0%;
-                
-               
-                
-            }
-            .sort{
-                width: 40%;
-                
-            }
-            .content{
-                background: rgba(29, 28, 28, 0.9);
-                border-radius:10px 30px 10px 30px;
-                position: relative;
-                width:80%;
-                box-shadow: -6px 0px 80px 19px rgba(69,66,69,1);
-                margin:0 auto;
-                margin-top: 100px;
-                padding: 5px 5px 20px 20px;  
-                }
-                .view{
-                    margin-top: 10px;
-                    padding :0px;  
-                    width: 90%;
-                    margin-left: 0%;
-                    display: inline-block;
-                 
-                }
-                
-    }
+}
