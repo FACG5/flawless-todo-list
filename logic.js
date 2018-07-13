@@ -23,8 +23,8 @@ var todoFunctions = {
 
     // add function
     addTodo: function(todos, newTodo) {
-      var newTodo1 = todoFunctions.cloneArrayOfObjects(todos);
-      return  newTodo1.concat(newTodo);
+      var copyOfTodoArray = todoFunctions.cloneArrayOfObjects(todos);
+      return  copyOfTodoArray.concat(newTodo);
 },
 
     // delete function
