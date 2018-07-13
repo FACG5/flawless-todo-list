@@ -1,4 +1,3 @@
-
 (function () {
   // This is the dom node where we will keep our todo
   var container = document.getElementById('todo-container');
@@ -6,98 +5,86 @@
 
   var state = [];
 
-  // This function takes a todo, it returns the DOM node representing that todo
+  // submit button click
   var submit = document.getElementById('add');
+  submit.addEventListener('click', function (event) {
+    event.preventDefault();
+    var descriptionToDo = document.getElementById("description");
+    var selectToDo = document.getElementById("select").value;
+    var idToDo = todoFunctions.generateId();
+    var markToDo = false;
+    if (descriptionToDo.value.trim() === '') {
+      alert('You must enter Description ! ');
+    } else {
+      var newItem = {
+        id: idToDo,
+        description: descriptionToDo.value,
+        priority: selectToDo,
+        mark: markToDo
+      };
+      var newState = todoFunctions.addTodo(state, newItem);
+      update(newState);
+      descriptionToDo.value = '';
 
-  submit.addEventListener('click',function(event){
-
-  event.preventDefault();
-  
-  var descriptionToDo = document.getElementById("description");
-  var selectToDo = document.getElementById("select").value;
-  var idToDo = todoFunctions.generateId();
-  var markToDo = false;
-  if(descriptionToDo.value.trim()===''){
-    alert('You must enter Description ! ');
-  }
-  else{
-  var newItem = {id:idToDo , description:descriptionToDo.value,priority:selectToDo,mark:markToDo};
-  var newState = todoFunctions.addTodo(state,newItem);
-
-  update(newState);
-  descriptionToDo.value='';
-  
-  }
-   });
-
-   // 
-   var sort = document.getElementById('sort');
-   sort.addEventListener("click",function(event){
-     event.preventDefault();
-     var newState = todoFunctions.sortTodos(state);
-     update(newState);
-   })
-
-
-  var createTodoNode = function(todo) {
-    var todoNode = document.createElement('li');
-    todoNode.className='todo-desc';
-    // you will need to use addEventListener
-
-
-    // add span holding description
-    var markBtn = document.createElement("input");
-    if(todo.mark){
-      markBtn.setAttribute('checked','true');
     }
+  });
 
+  // sort button click
+  var sort = document.getElementById('sort');
+  sort.addEventListener("click", function (event) {
+    event.preventDefault();
+    var newState = todoFunctions.sortTodos(state);
+    update(newState);
+  })
+
+  // add new item 
+  var createTodoNode = function (todo) {
+    var todoNode = document.createElement('li');
+    todoNode.className = 'todo-desc';
+
+
+    // add unmarked checkbox
+    var markBtn = document.createElement("input");
+    if (todo.mark) {
+      markBtn.setAttribute('checked', 'true');
+    }
     markBtn.setAttribute("type", "checkbox");
-    // markBtn.setAttribute("id", "checkbox");
+    
 
-
-    markBtn.addEventListener('click', function(event) {    
-    //  markBtn.setAttribute()
+    // checkbox toggle -mark-unmark-
+    markBtn.addEventListener('click', function (event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
-      
     });
-  
-  
     todoNode.appendChild(markBtn);
 
-var span = document.createElement('span');
-span.textContent = todo.description+ ": ( "+todo.priority+" )";
-if(todo.mark){
-  span.classList.add("mark");
+    // add priority to new item description and style when toggle marked botton
+    var span = document.createElement('span');
+    span.textContent = todo.description + ": ( " + todo.priority + " )";
+    if (todo.mark) {
+      span.classList.add("mark");
+      todoNode.appendChild(span);
 
-  // span.style.background="#d6d62a";
-  // span.style.color="black";
-  // span.style.padding="0px 15px";
-todoNode.appendChild(span);
+    } else {
+      span.style.color = 'white';
+      todoNode.appendChild(span);
+    }
 
-}
-else{
-  span.style.color='white';
-  todoNode.appendChild(span);
-}
-    // this adds the delete button
+
+    // add the delete button icon 
     var deleteButtonNode = document.createElement('span');
-    deleteButtonNode.className='far fa-trash-alt icon';
+    deleteButtonNode.className = 'far fa-trash-alt icon';
 
-    deleteButtonNode.addEventListener('click', function(event) {
+    // delete item and confir message
+    deleteButtonNode.addEventListener('click', function (event) {
       var confirmmessage = confirm("Are You Sure ?");
-      if(confirmmessage){
-      
-      var newState = todoFunctions.deleteTodo(state, todo.id);
-      update(newState);
-      }
-      else{
+      if (confirmmessage) {
 
-      }
+        var newState = todoFunctions.deleteTodo(state, todo.id);
+        update(newState);
+      } 
     });
     todoNode.appendChild(deleteButtonNode);
-
-
     return todoNode;
   };
 
@@ -116,7 +103,7 @@ else{
       todoListNode.appendChild(createTodoNode(todo));
     });
 
-    // you may want to add a class for css
+    
     container.replaceChild(todoListNode, container.firstChild);
   };
 
